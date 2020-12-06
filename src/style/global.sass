@@ -1,0 +1,92 @@
+*,
+::before,
+::after
+	font-family: 'Public Sans', sans-serif
+	background: transparent
+	box-sizing: border-box
+	text-decoration: none
+	border-color: inherit
+	font-size: inherit
+	color: inherit
+	outline: none
+	padding: 0
+	margin: 0
+	border: 0
+
+body
+	font-size: calc(14px + .25vw)
+	height: 100%
+
+#app
+	display: flex
+	flex-direction: column
+	min-height: 100vh
+	padding: 2rem 12rem
+	#main
+		flex: 1
+		margin-top: 5rem
+
+// Elevations
+.dp-0
+	box-shadow: none !important
+	z-index: 0
+.dp-1
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
+	z-index: 10
+.dp-2
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)
+	z-index: 20
+.dp-3
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)
+	z-index: 30
+.dp-4
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
+	z-index: 40
+.dp-5
+	box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22)
+	z-index: 50
+
+.cursor-p
+	cursor: pointer
+.cursor-d
+	cursor: default
+.cursor-n
+	cursor: none
+
+.no-pointer
+	pointer-events: none
+.unselectable
+	-webkit-touch-callout: none
+	-webkit-user-select: none
+	-khtml-user-select: none
+	-moz-user-select: none
+	-ms-user-select: none
+	user-select: none
+	cursor: default
+
+.flex
+	display: flex
+.f-wrap
+	flex-wrap: wrap
+.f-wrapup,.f-wraprev
+	flex-wrap: wrap-reverse
+.f-center,
+.f-jc
+	justify-content: center
+.f-js
+	justify-content: flex-start
+.f-je
+	justify-content: flex-end
+.f-jse
+	justify-content: space-evenly
+.f-jsb
+	justify-content: space-between
+.f-jsa
+	justify-content: space-around
+.f-center,
+.f-ac
+	align-items: center
+.f-as
+	align-items: flex-start
+.f-ae
+	align-items: flex-end

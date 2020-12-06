@@ -1,26 +1,21 @@
 // Dependencies
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
+import React from "react";
+import ReactDOM from "react-dom";
 
-// Routes
-import HomePage from "routes/home";
+// Store
+import { StateProvider } from "store";
 
-// Components
-import Header from "./components/header";
-import Footer from "./components/footer";
+// Router
+import Router from "./router";
 
-ReactDOM.render(<div id="app">
-		<BrowserRouter>
-			<Header />
-			<div id="main">
-				<Switch>
-					<Route path="/" exact component={HomePage} />
-					<Redirect from="*" to="/404" />
-				</Switch>
-			</div>
-			<Footer />
-		</BrowserRouter>
-	</div>,
-	document.getElementById('root')
+// Styles
+import "style/index.sass";
+
+ReactDOM.render(
+	<StateProvider>
+		<div id="app">
+			<Router />
+		</div>
+	</StateProvider>,
+	document.getElementById("root")
 );
