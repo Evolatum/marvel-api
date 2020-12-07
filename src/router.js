@@ -8,15 +8,19 @@ import Footer from "./components/footer";
 // Routes
 import HomePage from "routes/home";
 import SavedPage from "routes/saved";
+import ComicsPage from "routes/comics";
+import EventsPage from "routes/events";
 
 export default function Router(){
 	return(<BrowserRouter>
 		<Header />
 		<div id="main">
 			<Switch>
-				<Route path="/" exact component={HomePage} />
 				<Route path="/saved" exact component={SavedPage} />
-				<Redirect from="*" to="/" />
+				<Route path="/comics" exact component={ComicsPage} />
+				<Route path="/events" exact component={EventsPage} />
+				<Route path="/heroes" exact component={HomePage} />
+				<Redirect from="*" to="/heroes" />
 			</Switch>
 		</div>
 		<Footer />

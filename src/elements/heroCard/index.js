@@ -27,7 +27,8 @@ export default function HeroCard(props){
 			<h4>{props.name.split("(")[0]}</h4>
 			<p><b>Sightings:</b> {props.comics.available}</p>
 			<p className="description"><b>Information: </b>{props.description || "Classified."}</p>
-			<a href={`/heroes/${props.id}`}>See more</a>
+			{/* <a href={`/heroes/${props.id}`}>See more</a> */}
+			<a href={props.urls[0].url}>See more</a>
 		</div>
 	</div>
 }
