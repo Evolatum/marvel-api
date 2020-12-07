@@ -12,7 +12,7 @@ import ComicsPage from "routes/comics";
 import EventsPage from "routes/events";
 
 export default function Router(){
-	return(<BrowserRouter>
+	return(<BrowserRouter basename="/marvel-api">
 		<Header />
 		<div id="main">
 			<Switch>
