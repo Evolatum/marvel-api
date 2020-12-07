@@ -17,3 +17,27 @@
 			color: #0f5f8d
 			&:hover
 				color: #318cc0
+
+@media only screen and (max-width: 992px)
+	#header
+		height: 7rem
+		flex-wrap: wrap
+		text-align: center
+		.h1
+			padding-top: 1rem
+			width: 100%
+		.links
+			width: 100%
+			display: flex
+			justify-content: space-around
+			a
+				margin-left: 0
+
+@media only screen and (max-width: 600px)
+	#header
+		.h1
+			font-size: 1.7rem
+			padding-top: 0.5rem
+		.links
+			justify-content: space-between
+			flex-wrap: wrap
