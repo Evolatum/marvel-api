@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
+import { HashRouter, Switch, Route, Redirect } from "react-router-dom";
 
 // Components
 import Header from "./components/header";
@@ -12,7 +12,7 @@ import ComicsPage from "routes/comics";
 import EventsPage from "routes/events";
 
 export default function Router(){
-	return(<BrowserRouter basename="/marvel-api">
+	return(<HashRouter>
 		<Header />
 		<div id="main">
 			<Switch>
@@ -24,5 +24,5 @@ export default function Router(){
 			</Switch>
 		</div>
 		<Footer />
-	</BrowserRouter>);
+	</HashRouter>);
 }
